@@ -13,7 +13,13 @@ echo \
 sudo apt-get update
 
 # Install Docker Engine
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+# Install Docker Compose
+sudo apt  install docker-compose -y
+
+# Add user to Docker group
+sudo usermod -aG docker $USER
 
 # Verify that Docker Engine is installed correctly by running the hello-world image:
 sudo docker run hello-world
