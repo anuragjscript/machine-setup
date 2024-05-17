@@ -85,7 +85,7 @@ git config --global alias.checkremote "!f() { git fetch origin && git branch --r
 git config --global alias.checklocal "!f() { git branch --list | grep -q \"$1\" && echo \"Branch '$1' exists locally\" || echo \"Branch '$1' does not exist locally\"; }; f"
 
 # Add Delete File in one line
-git config --global alias.clean-dry "!git clean -n -d && read -p 'Continue with deletion? (y/n): ' response && [ "$response" = "y" ] && git clean -f -d"
+git config --global alias.clean-dry '!bash -c '\''git clean -n -d && read -p "Continue with deletion? (y/n): " response && [ "$response" = "y" ] && git clean -f -d'\'
 
 # Check if all commands were successful and display a message
 if [ $? -eq 0 ]; then
