@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Checkout to branch x
+git config --global alias.co checkout
+
 # Show a summarized git log
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
