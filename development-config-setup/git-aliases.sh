@@ -3,6 +3,9 @@
 # Checkout to branch x
 git config --global alias.co checkout
 
+# Git clean node_modules
+git config --global alias.cnm '!git rm -rf --cached node_modules'
+
 # Show a summarized git log
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
@@ -23,6 +26,9 @@ git config --global alias.branches "branch -a"
 
 # Show a list of remote repositories
 git config --global alias.remotes "remote -v"
+
+# Add Git remove remote origin
+git config --global alias.rm-remote '!f() { if [ -z "$1" ]; then git remote rm origin; else git remote rm "$1"; fi }; f'
 
 # Show a list of staged files
 git config --global alias.staged "diff --cached"
