@@ -79,7 +79,7 @@ git config --global alias.applystash "stash apply"
 git config --global alias.newbr "checkout -b"
 
 # Delete a branch locally and remotely
-git config --global alias.delbr "!f() { git branch -d $1 && git push origin --delete $1; }; f"
+git config --global alias.delbr '!f() { git branch -d "$1" && git push origin --delete "$1"; }; f'
 
 # Add Commit & Message in one line
 git config --global alias.acm '!f() { git add . && git commit -m "$1"; }; f'
